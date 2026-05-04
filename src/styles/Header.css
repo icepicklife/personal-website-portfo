@@ -1,0 +1,189 @@
+.portfolio-header{
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    z-index: 1000;
+    background-color: #2e2836;
+    overflow: hidden;
+
+}
+
+.portfolio-header::before {
+
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -20px;
+    width: 33%;
+    height: 200px;
+    background-color: #f5fbef;
+    border-radius: 0 0 60% 0;
+    z-index: 0;
+
+}
+
+.left-header, .right-header {
+
+    position: relative;
+    z-index: 1;
+
+}
+
+.left-header {
+
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+}
+
+.logo {
+
+    height: 40px;
+    width: auto;
+
+}
+
+.brand-name {
+
+    color: #121415;
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: 900;
+    font-size: 1.6rem;
+    letter-spacing: -0.5px;
+
+}
+
+.right-header {
+
+    display: flex;
+    gap: 35px;
+
+}
+
+.right-header a {
+
+    text-decoration: none;
+    color: #d0d2f0;
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+
+}
+
+.right-header a:hover {
+    
+    color: #eac0bf;
+    
+}
+
+.hamburger {
+
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 100;
+
+}
+
+.hamburger .bar {
+
+    height: 3px;
+    width: 100%;
+    background-color: #121415;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+
+}
+
+.hamburger.active .bar:nth-child(1) {
+
+    transform: translateY(9px) rotate(45deg);
+
+}
+
+.hamburger.active .bar:nth-child(2) {
+
+    opacity: 0;
+    
+}
+
+.hamburger.active .bar:nth-child(3) {
+
+    transform: translateY(-9px) rotate(-45deg);
+
+}
+
+@media (max-width: 768px) {
+
+    .portfolio-header {
+
+        background-color: #f5fbef;
+        overflow: visible; 
+        justify-content: left;
+        gap: 90px;
+
+    }
+
+    .left-header {
+
+        gap: 60px;
+
+    }
+    
+    .portfolio-header::before {
+
+        display: none; 
+
+    }
+
+    .hamburger {
+
+        display: flex;
+        
+    }
+
+    .right-header {
+
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        width: 100%;
+        background-color: #2e2836; 
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 40px 50px;
+        gap: 40px;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: clip-path 0.4s ease-in-out;
+
+    }
+
+    .right-header.mobile-open {
+
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+
+    }
+
+    .right-header a {
+
+        color: #d0d2f0;
+        font-size: 1.5rem;
+        font-weight: 500;
+
+    }
+
+
+}

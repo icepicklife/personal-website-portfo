@@ -1,0 +1,103 @@
+import '../styles/Projects.css';
+import circle_graphic from '../assets/graphics/project_title_bubble.png'
+
+import BuyTheWay_preview from '../assets/images/buytheway_preview.png'
+import Talab_preview from '../assets/images/talab_preview.png'
+import Hobbysite_preview from '../assets/images/hobbysite_preview.png'
+import Uaap_preview from '../assets/images/uaap_preview.png'
+import Maze_preview from '../assets/images/mazegame_preview.png'
+import TouchGrass_preview from '../assets/images/touchgrass_preview.png'
+
+const projectsData = [
+
+    {
+        id: 1,
+        title: "BuyTheWay",
+        description: "Localized E-commerce platform that aims to centralize and secure the pasabuy experience among its possible international goods listings.",
+        tech: ["HTML", "CSS", "JS", "Django"],
+        img: BuyTheWay_preview
+    },
+    {
+        id: 2,
+        title: "TALAB 2025 Website",
+        description: "Volunteered to be one of the developers in creating an enlistment platform for Ateneans to choose their talks and activities for TALAB in 2025.",
+        tech: ["HTML", "CSS", "JS", "Django"],
+        img: Talab_preview
+    },
+    {
+        id: 3,
+        title: "Hobbysite",
+        description: "Community-centric platform that allows users to post blogs, articles, comments and other forum-styled activities along with account creation.",
+        tech: ["HTML", "CSS", "Django"],
+        img: Hobbysite_preview
+    },
+    {
+        id: 4,
+        title: "UAAP 87 Blue Eagles Digital Primer",
+        description: "Digital magazine of the in-depth overviews of each sport teams that will compete in the UAAP Season 87, covering the articles written by the school publication.",
+        tech: ["HTML", "CSS", "React", "Figma"],
+        img: Uaap_preview
+    },
+    {
+        id: 5,
+        title: "Rock Paper Scissors Maze Game",
+        description: "2D-Maze Game that integrates rock paper scissors with new mechanics integrated within a maze to collect what will they throw.",
+        tech: ["Java", "Figma"],
+        img: Maze_preview
+    },
+    {
+        id: 6,
+        title: "Touch Grass",
+        description: "Android app that allows users to post and share their touching grass moments alongside captions and comments about the experience.",
+        tech: ["Android Studio", "Gradle", "Java", "Figma"],
+        img: TouchGrass_preview
+    }
+
+];
+
+export default function Projects() {
+
+    return (
+
+        <section className="projects-pane" id="projects">
+
+            <div className="projects-banner">
+
+                <div className="banner-accent-left"></div>
+                <h2 className="banner-name">Projects</h2>
+                <div className="banner-accent-right"></div>
+
+            </div>
+
+            <div className="projects-content">
+                
+                {projectsData.map((project, index) => (
+
+                    <div className={`project-card ${index % 2 !== 0 ? 'reversed' : ''}`} key={project.id}>
+
+                        <div className="project-image-container">
+                            <img src={project.img} alt={project.title} className="project-image" />
+                        </div>
+
+                        <div className="project-info">
+
+                            <div className="project-header">
+                                <h3 className="project-title">{project.title}</h3>
+                                <img src={circle_graphic} alt="" className="circles-icon" />
+                            </div>
+
+                            <p className="project-description">{project.description}</p>
+
+                            <div className="project-tech">
+                                {project.tech.map((techItem) => (
+                                    <span className="tech-pill" key={techItem}>{techItem}</span>
+                                ))}
+                            </div>
+                        </div>
+
+                    </div>
+                ))}
+            </div>
+        </section>
+    );
+}

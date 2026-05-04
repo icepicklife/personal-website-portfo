@@ -1,0 +1,242 @@
+.projects-pane {
+
+    min-height: 100vh;
+    background-color: #121415;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 80px 0 80px;
+    font-family: 'SF Pro Display', sans-serif;
+}
+
+.projects-banner {
+    width: 100%;
+    background-color: #252627;
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 70px;
+}
+
+.projects-banner .banner-accent-left {
+
+    width: calc(max(50vw - 575px, 20px) + 25px);
+    background-color: #118ab2;
+    flex-shrink: 0;
+
+}
+
+.projects-banner .banner-name {
+
+    color: #f5fbef;
+    font-weight: 900;
+    font-size: 2.5rem;
+    padding: 15px 30px;
+    margin: 0;
+    letter-spacing: -0.5px;
+
+}
+
+.projects-banner .banner-accent-right {
+
+    flex-grow: 1;
+    background-color: #986c6a;
+
+}
+
+.projects-content {
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1150px;
+    gap: 80px;
+    padding: 0 20px;
+
+}
+
+.project-card {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+
+}
+
+.project-image-container {
+
+    flex: 1;
+
+}
+
+.project-image {
+
+    width: 100%;
+    height: auto;
+    border-radius: 68px;
+    border: 4px solid #986c6a; 
+    box-shadow: 0 0 20px 2px rgba(17, 138, 178, 0.4);
+    margin: 0;
+    transition: transform 0.3s cubic-bezier(0.30, 0.8, 0.30, 1), 
+                margin 0.3s cubic-bezier(0.30, 0.8, 0.30, 1), 
+                background-color 0.3s ease,
+                box-shadow 0.3s ease;
+
+}
+
+.project-image:hover {
+
+    transform: scale(1.25);
+    margin: 10px 20px; 
+    z-index: 2;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+
+}
+
+.project-info {
+
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.3s ease;
+
+}
+
+.project-card:hover .project-info {
+    
+    transform: translateX(60px); 
+
+}
+
+.project-card.reversed:hover .project-info {
+    
+    transform: translateX(-60px); 
+
+}
+
+.project-header {
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+
+}
+
+.project-title {
+
+    color: #f5fbef;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 2rem;
+    margin: 0;
+
+}
+
+.circles-icon {
+    height: 35px;
+    /* Adjust this to match your exported PNG size */
+    width: auto;
+}
+
+.project-description {
+
+    color: #ffffff;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+
+}
+
+.project-tech {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+}
+
+.tech-pill {
+
+    color: #f5fbef;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 6px 18px;
+    border-radius: 30px;
+    background-color: transparent;
+    border: 1px solid #118ab2;
+    transition: transform 0.3s cubic-bezier(0.30, 0.8, 0.30, 1), 
+                margin 0.3s cubic-bezier(0.30, 0.8, 0.30, 1), 
+                background-color 0.3s ease,
+                box-shadow 0.3s ease;
+
+}
+
+.tech-pill:hover {
+
+    transform: scale(1.2);
+    margin: 0px 24px;
+    z-index: 2;
+    background-color: #121415;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    cursor: default;
+
+}
+
+
+.project-card.reversed {
+
+    flex-direction: row-reverse;
+
+}
+
+.project-card.reversed .circles-icon {
+
+  transform: scaleX(-1);
+
+}
+
+.project-card.reversed .project-info {
+
+    align-items: flex-end;
+    text-align: right;
+
+}
+
+.project-card.reversed .project-header {
+
+    flex-direction: row-reverse;
+
+}
+
+.project-card.reversed .project-tech {
+
+    justify-content: flex-end;
+    
+}
+
+
+@media (max-width: 768px) {
+
+    .project-card, .project-card.reversed {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .project-info, .project-card.reversed .project-info {
+        align-items: center;
+        text-align: center;
+    }
+
+    .project-header, .project-card.reversed .project-header {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .project-tech, .project-card.reversed .project-tech {
+        justify-content: center;
+    }
+}

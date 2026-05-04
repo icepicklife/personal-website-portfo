@@ -1,0 +1,157 @@
+.contact-panel {
+
+    min-height: 100vh;
+    background-color: #033647; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 80px 0 120px;
+    font-family: 'SF Pro Display', sans-serif;
+
+}
+
+.contact-banner {
+
+    width: 100%;
+    background-color: transparent; 
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 70px;
+
+}
+
+.contact-banner .banner-accent-left, .contact-banner .banner-accent-right {
+
+    flex: 1; 
+    background-color: #f5fbef; 
+    width: unset;
+
+}
+
+.contact-banner .banner-name {
+
+    color: #f5fbef;
+    font-weight: 900;
+    font-size: 3rem; 
+    padding: 15px 40px;
+    margin: 0;
+    letter-spacing: -0.5px;
+
+}
+
+.contact-content {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    padding: 0 20px;
+
+}
+
+.contact-intro {
+
+    color: #f5fbef;
+    font-size: 1.25rem;
+    line-height: 1.8;
+    text-align: center;
+    margin-bottom: 80px;
+    font-weight: 400;
+
+}
+
+.contact-list {
+
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: flex-start;
+
+}
+
+.contact-item {
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    text-decoration: none; 
+    transition: transform 0.2s ease, opacity 0.2s ease;
+
+}
+
+.contact-item:hover {
+
+    transform: translateX(10px);
+    opacity: 0.8;
+
+}
+
+.icon-container {
+
+    width: 60px; 
+    display: flex;
+    justify-content: center;
+
+}
+
+.contact-icon {
+
+    width: 100%;
+    height: auto;
+
+}
+
+.contact-separator {
+
+    width: 3px;
+    height: 60px;
+    background-color: #f5fbef;
+    border-radius: 2px;
+
+}
+
+.contact-text {
+
+    color: #f5fbef;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+
+}
+
+@media (max-width: 768px) {
+
+    .contact-banner .banner-name {
+
+        font-size: 2rem;
+        padding: 15px 20px;
+
+    }
+
+    .contact-intro {
+
+        font-size: 1.1rem;
+        margin-bottom: 50px;
+
+    }
+
+    .contact-text {
+
+        font-size: 1.5rem;
+
+    }
+
+    .contact-separator {
+
+        height: 40px;
+
+    }
+
+    .icon-container {
+
+        width: 40px;
+
+    }
+}
