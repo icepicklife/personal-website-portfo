@@ -90,17 +90,19 @@
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 30px;
+    width: 85px;
     height: 21px;
     cursor: pointer;
     z-index: 100;
+    margin-right: 5px;
+
 
 }
 
 .hamburger .bar {
 
     height: 3px;
-    width: 100%;
+    width: 35px;
     background-color: #121415;
     border-radius: 10px;
     transition: all 0.3s ease;
@@ -132,13 +134,13 @@
         background-color: #f5fbef;
         overflow: visible; 
         justify-content: left;
-        gap: 90px;
+        gap: 70px;
 
     }
 
     .left-header {
 
-        gap: 60px;
+        gap: 59px;
 
     }
     
