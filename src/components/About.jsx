@@ -47,7 +47,7 @@ export default function About() {
             <div className='about-actions'>
                 <a href="#projects" className='action-btn'>
                     <i>View Projects</i>
-                    <img src={resume_icon} alt="Resume Icon" className="btn-icon" />
+                    <img src={project_icon} alt="Resume Icon" className="btn-icon" />
                 </a>
 
                 <a href={resume_pdf} className='action-btn'>
