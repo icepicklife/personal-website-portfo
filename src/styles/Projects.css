@@ -126,6 +126,44 @@
 
 }
 
+.project-title-link {
+
+    color: #f5fbef;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+}
+
+.title-link-icon {
+
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #d0d2f0;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+}
+
+.project-title-link:hover {
+
+    color: #d0d2f0;
+
+}
+
+.project-title-link:hover .title-link-icon {
+
+    transform: translate(0px, -4px);
+    color: #f5fbef;
+
+}
+
+/*
 .project-title {
 
     color: #f5fbef;
@@ -135,6 +173,7 @@
     margin: 0;
 
 }
+*/
 
 .circles-icon {
     height: 35px;
