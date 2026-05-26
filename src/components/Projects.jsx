@@ -96,7 +96,7 @@ export default function Projects() {
 
                             <div className="project-header">
                                 <a
-                                    href={project.link}
+                                    href={project.view_link}
                                     target='_blank'
                                     rel='noopener noreferrer'
                                     className='project-title-link'
