@@ -41,7 +41,7 @@ export default function Contact() {
 
             <div className="contact-content">
                 <p className="contact-intro">
-                    I am currently looking for internships! Kindly reach me through these platform and hope you
+                    I am currently looking for career growth and opportunities! Kindly reach me through these platforms and hope you
                     consider me into your business endeavors as we connect and collaborate soon :))
                 </p>
 

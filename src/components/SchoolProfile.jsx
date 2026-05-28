@@ -6,7 +6,7 @@ const SchoolData = [
 
         id: 1,
         title: "QPI",
-        items: ["3.38"],
+        items: ["3.40"],
         isLarge: true
 
     },
@@ -14,7 +14,7 @@ const SchoolData = [
 
         id: 2,
         title: "Year",
-        items: ["3rd"],
+        items: ["4th"],
         isLarge: true
 
     },
