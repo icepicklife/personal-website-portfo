@@ -74,9 +74,17 @@ body {
     
 }
 
-html, body, #root {
+html {
 
-    scroll-behavior: smooth !important;
-    scroll-padding-top: 80px;
+    scroll-behavior: smooth;
 
+}
+
+#about,
+#projects,
+#skills,
+#organizations,
+#school,
+#contact {
+    scroll-margin-top: 80px;
 }

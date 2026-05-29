@@ -8,21 +8,29 @@ export default function Header() {
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
-    const handleScroll = (e) => {
+    const handleScroll = (e, targetPage) => {
 
         e.preventDefault();
 
-        const targetPage = e.currentTarget.getAttribute('href');
         const targetEle = document.querySelector(targetPage);
 
         if (targetEle) {
 
-            targetEle.scrollIntoView({
+            const headerOffset = 80;
+            
+            const elementPosition = targetEle.getBoundingClientRect().top + window.scrollY;
 
-                behavior: 'smooth',
-                block: 'start'
+            const offsetPosition = elementPosition - headerOffset;
+
+            window.scrollTo({
+
+                top: offsetPosition,
+                behavior: 'smooth'
 
             });
+
+            history.pushState(null, "", targetPage);
+            
         }
 
         setIsMenuOpen(false);
@@ -47,12 +55,12 @@ export default function Header() {
             </div>
 
             <nav className={`right-header ${isMenuOpen ? 'mobile-open' : ''}`}>
-                <a href="#about" onClick={handleScroll}>Home</a>
-                <a href="#projects" onClick={handleScroll}>Projects</a>
-                <a href="#skills" onClick={handleScroll}>Skills</a>
-                <a href="#organizations" onClick={handleScroll}>Organizations</a>
-                <a href="#school" onClick={handleScroll}>School Life</a>
-                <a href="#contact" onClick={handleScroll}>Contact</a>
+                <a href="#about" onClick={(e) => handleScroll(e, "#about")}>Home</a>
+                <a href="#projects" onClick={(e) => handleScroll(e, "#projects")}>Projects</a>
+                <a href="#skills" onClick={(e) => handleScroll(e, "#skills")}>Skills</a>
+                <a href="#organizations" onClick={(e) => handleScroll(e, "#organizations")}>Organizations</a>
+                <a href="#school" onClick={(e) => handleScroll(e, "#school")}>School Life</a>
+                <a href="#contact" onClick={(e) => handleScroll(e, "#contact")}>Contact</a>
             </nav>
 
         </header>
