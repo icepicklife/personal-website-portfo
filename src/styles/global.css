@@ -73,18 +73,3 @@ body {
     -moz-osx-font-smoothing: grayscale;
     
 }
-
-html {
-
-    scroll-behavior: smooth;
-
-}
-
-#about,
-#projects,
-#skills,
-#organizations,
-#school,
-#contact {
-    scroll-margin-top: 80px;
-}

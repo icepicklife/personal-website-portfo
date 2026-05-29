@@ -8,11 +8,11 @@ export default function Header() {
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
-    const handleScroll = (e, targetPage) => {
+    const handleScroll = (e, targetId) => {
 
         e.preventDefault();
 
-        const targetEle = document.querySelector(targetPage);
+        const targetEle = document.querySelector(targetId);
 
         if (targetEle) {
 
@@ -22,6 +22,8 @@ export default function Header() {
 
             const offsetPosition = elementPosition - headerOffset;
 
+            document.documentElement.style.scrollBehavior = '';
+
             window.scrollTo({
 
                 top: offsetPosition,
@@ -29,8 +31,12 @@ export default function Header() {
 
             });
 
-            history.pushState(null, "", targetPage);
-            
+            setTimeout(() => {
+                document.documentElement.style.scrollBehavior = 'auto';
+            }, 800);
+
+            history.pushState(null, "", targetId);
+
         }
 
         setIsMenuOpen(false);
