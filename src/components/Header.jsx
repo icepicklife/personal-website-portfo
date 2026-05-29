@@ -8,8 +8,25 @@ export default function Header() {
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
-    const closeMenu = () => {
+    const handleScroll = (e) => {
+
+        e.preventDefault();
+
+        const targetPage = e.currentTarget.getAttribute('href');
+        const targetEle = document.querySelector(targetPage);
+
+        if (targetEle) {
+
+            targetEle.scrollIntoView({
+
+                behavior: 'smooth',
+                block: 'start'
+
+            });
+        }
+
         setIsMenuOpen(false);
+
     };
 
     return (
@@ -30,12 +47,12 @@ export default function Header() {
             </div>
 
             <nav className={`right-header ${isMenuOpen ? 'mobile-open' : ''}`}>
-                <a href="#about" onClick={closeMenu}>Home</a>
-                <a href="#projects" onClick={closeMenu}>Projects</a>
-                <a href="#skills" onClick={closeMenu}>Skills</a>
-                <a href="#organizations" onClick={closeMenu}>Organizations</a>
-                <a href="#school" onClick={closeMenu}>School Life</a>
-                <a href="#contact" onClick={closeMenu}>Contact</a>
+                <a href="#about" onClick={handleScroll}>Home</a>
+                <a href="#projects" onClick={handleScroll}>Projects</a>
+                <a href="#skills" onClick={handleScroll}>Skills</a>
+                <a href="#organizations" onClick={handleScroll}>Organizations</a>
+                <a href="#school" onClick={handleScroll}>School Life</a>
+                <a href="#contact" onClick={handleScroll}>Contact</a>
             </nav>
 
         </header>

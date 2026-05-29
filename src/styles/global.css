@@ -74,9 +74,9 @@ body {
     
 }
 
-html {
+html, body, #root {
 
-    scroll-behavior: smooth;
+    scroll-behavior: smooth !important;
     scroll-padding-top: 80px;
 
 }
