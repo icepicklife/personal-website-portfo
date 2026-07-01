@@ -22,48 +22,60 @@ const projectsData = [
         title: "BuyTheWay",
         description: "Localized E-commerce platform that aims to centralize and secure the pasabuy experience among its possible international goods listings.",
         tech: ["HTML", "CSS", "JS", "Django"],
+        date_released: "Apr 2026",
+        roles_done: ["UX/UI", "Front-end", "Back-end"],
         img: BuyTheWay_preview,
-        view_link: BuyTheWay_github 
+        view_link: BuyTheWay_github
     },
     {
         id: 2,
         title: "TALAB 2025 Website",
         description: "Volunteered to be one of the developers in creating an enlistment platform for Ateneans to choose their talks and activities for TALAB in 2025.",
         tech: ["HTML", "CSS", "JS", "Django"],
+        date_released: "Oct 2025",
+        roles_done: ["UX/UI", "Front-end"],
         img: Talab_preview,
-        view_link: talab_github 
+        view_link: talab_github
     },
     {
         id: 3,
         title: "Hobbysite",
         description: "Community-centric platform that allows users to post blogs, articles, comments and other forum-styled activities along with account creation.",
         tech: ["HTML", "CSS", "Django"],
+        date_released: "May 2025",
+        roles_done: ["UX/UI", "Front-end", "Back-end"],
         img: Hobbysite_preview,
-        view_link: hobbysite_github 
+        view_link: hobbysite_github
     },
     {
         id: 4,
         title: "UAAP 87 Blue Eagles Digital Primer",
         description: "Digital magazine of the in-depth overviews of each sport teams that will compete in the UAAP Season 87, covering the articles written by the school publication.",
         tech: ["HTML", "CSS", "React", "Figma"],
+        date_released: "July 2024 & Jan 2025",
+        roles_done: ["UX/UI", "Front-end"],
         img: Uaap_preview,
-        view_link: UAAP_livelink 
+        view_link: UAAP_livelink
     },
     {
         id: 5,
         title: "Rock Paper Scissors Maze Game",
         description: "2D-Maze Game that integrates rock paper scissors with new mechanics integrated within a maze to collect what will they throw.",
         tech: ["Java", "Figma"],
+        date_released: "May 2024",
+        roles_done: ["Assets", "Game Logic Development"],
         img: Maze_preview,
-        view_link: MazeGame_github 
+        view_link: MazeGame_github
     },
     {
         id: 6,
         title: "Touch Grass",
         description: "Android app that allows users to post and share their touching grass moments alongside captions and comments about the experience.",
         tech: ["Android Studio", "Gradle", "Java", "Figma"],
+        date_released: "July 2025",
+        roles_done: ["Assets", "UX/UI", "Mobile Full-Stack Development"],
         img: TouchGrass_preview,
-        view_link: TouchGrass_github 
+        view_link: TouchGrass_github
     }
 
 ];
@@ -83,7 +95,7 @@ export default function Projects() {
             </div>
 
             <div className="projects-content">
-                
+
                 {projectsData.map((project, index) => (
 
                     <div className={`project-card ${index % 2 !== 0 ? 'reversed' : ''}`} key={project.id}>
@@ -108,6 +120,33 @@ export default function Projects() {
                                 <h3 className="project-title">{project.title}</h3>
                                 */}
                                 <img src={circle_graphic} alt="" className="circles-icon" />
+                            </div>
+
+                            <div className='project-year-roles'>
+
+                                {index % 2 !== 0 ? (
+
+                                    <>
+                                        {project.roles_done && project.roles_done.map((role) => (
+                                            <span className="meta-pill role-pill" key={role}>
+                                                {role}
+                                            </span>
+                                        ))}
+
+                                        {project.date_released && <span className="meta-pill date-pill">{project.date_released}</span>}
+                                    </>
+
+                                ) : (
+                                    
+                                    <>
+                                        {project.date_released && <span className="meta-pill date-pill">{project.date_released}</span>}
+                                        {project.roles_done && project.roles_done.map((role) => (
+                                            <span className="meta-pill role-pill" key={role}>{role}</span>
+                                        ))}
+                                    </>
+
+                                )}
+
                             </div>
 
                             <p className="project-description">{project.description}</p>
