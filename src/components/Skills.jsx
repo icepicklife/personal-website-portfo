@@ -23,6 +23,7 @@ import office_logo from "../assets/logos/msoffice-logo.svg"
 import chevron_icon from "../assets/icons/right-chevron-icon.svg"
 
 const creatives_drivelink = "https://drive.google.com/file/d/1GBAlWttvskstKdcYttWACx-9mBoqLM6r/view?usp=sharing"
+const photos_vids_drivelink = "https://drive.google.com/file/d/1d0xmPEqmsDhbT_5M5d7ieaTTcIs2xj8R/view?usp=sharing"
 
 const skillsListed = [
     {
@@ -99,10 +100,17 @@ export default function Skills() {
                     </div>
                 ))}
 
-                <a href={creatives_drivelink} target="_blank" rel="noopener noreferrer" className="portfolio-btn">
-                    <i>View Creatives Portfolio Here</i>
-                    <img src={chevron_icon} alt="Chevron Right" className="btn-icon" />
-                </a>
+                <div className="portfolio-buttons-container">
+                    <a href={creatives_drivelink} target="_blank" rel="noopener noreferrer" className="portfolio-btn">
+                        <i>Creatives Portfolio</i>
+                        <img src={chevron_icon} alt="Chevron Right" className="btn-icon" />
+                    </a>
+
+                    <a href={photos_vids_drivelink} target="_blank" rel="noopener noreferrer" className="portfolio-btn">
+                        <i>Photos & Videos Portfolio</i>
+                        <img src={chevron_icon} alt="Chevron Right" className="btn-icon" />
+                    </a>
+                </div>
 
             </div>
         </section>

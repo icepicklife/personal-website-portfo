@@ -118,12 +118,21 @@
 
 }
 
+.portfolio-buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 110px;
+    width: 100%;
+    margin-top: 40px;
+}
+
 .portfolio-btn{
 
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
     background-color: #d0d2f0;
     color: #121415;
     text-decoration: none;
@@ -131,9 +140,10 @@
     font-size: 1.1rem;
     padding: 16px 30px;
     border-radius: 40px;
-    margin: 40px auto 0;
+    margin: 0;
     width: 100%;
     max-width: 500px;
+    flex: 1;
     transition: all 0.3 ease;
 
 }
@@ -160,6 +170,10 @@
 }
 
 @media (max-width: 768px) {
+
+    .portfolio-buttons-container {
+        flex-direction: column;
+    }
 
     .category-title {
 
