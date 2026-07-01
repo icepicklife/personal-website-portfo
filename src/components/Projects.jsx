@@ -63,7 +63,7 @@ const projectsData = [
         description: "2D-Maze Game that integrates rock paper scissors with new mechanics integrated within a maze to collect what will they throw.",
         tech: ["Java", "Figma"],
         date_released: "May 2024",
-        roles_done: ["Assets", "Game Logic Development"],
+        roles_done: ["Assets", "Game Logic"],
         img: Maze_preview,
         view_link: MazeGame_github
     },
@@ -73,7 +73,7 @@ const projectsData = [
         description: "Android app that allows users to post and share their touching grass moments alongside captions and comments about the experience.",
         tech: ["Android Studio", "Gradle", "Java", "Figma"],
         date_released: "July 2025",
-        roles_done: ["Assets", "UX/UI", "Mobile Full-Stack Development"],
+        roles_done: ["Assets", "UX/UI", "Mobile Full-Stack"],
         img: TouchGrass_preview,
         view_link: TouchGrass_github
     }
